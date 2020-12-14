@@ -13,7 +13,7 @@ before_script:
 
 script:
   - docker --version
-  - docker build -t simple-reverse-proxy
+  - docker build -t simple-reverse-proxy .
   - docker tag simple-reverse-proxy mahmoud1ahmedy/simple-reverse-proxy
 
 after_success:
