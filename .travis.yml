@@ -14,8 +14,8 @@ before_script:
 script:
   - docker --version
   - docker build -t simple-reverse-proxy
-  - docker tag simple-reverse-proxy m7m9d-a7medy/simple-reverse-proxy
+  - docker tag simple-reverse-proxy mahmoud1ahmedy/simple-reverse-proxy
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push m7m9d-a7medy/simple-reverse-proxy
+  - docker push mahmoud1ahmedy/simple-reverse-proxy
